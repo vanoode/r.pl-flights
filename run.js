@@ -9,7 +9,7 @@ for (var i = 0;i < config.links.length; i++ ) {
         .wait(10000)
         .evaluate(function() {
             return {
-                seats: $('#IloscOsob-menu li:last a').html(),
+                seats: $('select#IloscOsob').show().find('option:last').html(),
                 price: $('#CenaCalkowita').html(),
                 dateFrom: $('.zlozonaData').first().find('.dzien').html(),
                 dateTo: $('.zlozonaData').last().find('.dzien').html(),
