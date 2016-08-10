@@ -1,0 +1,15 @@
+{
+  "name": "loty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-horseman": "^3.1.1",
+    "nodemailer": "^2.5.0"
+  }
+}
