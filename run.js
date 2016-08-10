@@ -6,6 +6,7 @@ for (var i = 0;i < config.links.length; i++ ) {
     new Horseman()
         .userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0")
         .open(config.links[i])
+        .wait(10000)
         .evaluate(function() {
             return {
                 seats: $('#IloscOsob-menu li:last a').html(),
