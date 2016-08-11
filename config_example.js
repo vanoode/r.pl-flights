@@ -2,5 +2,6 @@ module.exports = {
     links: [],
     transporter: '',
     to: '',
-    from: ''
+    from: '',
+    seatsLimit: 9
 };

@@ -19,7 +19,12 @@ for (var i = 0;i < config.links.length; i++ ) {
             }
         })
         .then(function(details) {
-            sendMail(details);
+            details.seats = getNumberFromString(details.seats);
+            details.pricePure = getNumberFromString(details.price);
+
+            if (details.seats < config.seatsLimit) {
+                sendMail(details);
+            }
         })
         .screenshot('details.png')
         .close();
@@ -48,4 +53,10 @@ function sendMail(data) {
         }
         console.log('Message sent: ' + info.response);
     });
+}
+
+
+function getNumberFromString (str) {
+    var numb = str.match(/\d/g);
+    return parseInt(numb.join(""), 10);
 }
